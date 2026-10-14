@@ -1,16 +1,30 @@
-# React + Vite
+# t3_act4_react - Introducción a React: Fundamentos y Primer Componente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del Proyecto
+Aplicación interactiva de lista de tareas creada con React y Vite. Permite agregar nuevas tareas, marcar o desmarcar elementos como completados y llevar un registro visual del progreso del usuario.
 
-Currently, two official plugins are available:
+### Estructura y Conceptos Aplicados:
+- App.jsx: Componente principal que contiene el encabezado (Header) y pasa información mediante props.
+- TodoApp.jsx: Componente modular que maneja el estado de la aplicación (useState) y renderiza dinámicamente la lista de tareas utilizando el método .map() con sus respectivas keys.
+- App.css: Estilos de presentación general de la interfaz.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Cuestionario de Comprensión
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ a) ¿Qué diferencia hay entre props y state en React?
+- Props (Propiedades): Son datos que un componente padre le pasa a un componente hijo. Son de solo lectura, significa que el componente que las recibe no las puede modificar directamente.
+- State (Estado): Es una estructura de datos del propio componente que puede cambiar a lo largo del tiempo. Cuando el estado cambia, React vuelve a renderizar el componente automáticamente para reflejar la modificacion.
 
-## Expanding the ESLint configuration
+ b) ¿Por qué es importante usar una key al renderizar una lista de elementos?
+Porque asigna un identificador único a cada elemento generado. Esto le permite a React identificar exactamente qué elementos han sido modificados, agregados o eliminados, optimizando el rendimiento del DOM virtual sin tener que redibujar toda la lista desde cero.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ c) Explica con tus propias palabras qué hace la función useState y da un ejemplo de dónde la usaste en tu mini aplicación.
+useState es un Hook que nos permite agregar memoria a un componente funcional. Regresa la variable del estado y una función para actualizarla. En la mini aplicación lo utilicé dentro de TodoApp.jsx para almacenar el arreglo de tareas y reiniciar la vista cada vez que se añade una nueva tarea o se cambia su estado de completada.
+
+---
+
+## Enlaces de Entrega
+
+- d) Repositorio en GitHub: https://github.com/jordimoises01-pixel/t3_act4_react
+- e) Proyecto desplegado en GitHub Pages: https://jordimoises01-pixel.github.io/t3_act4_react/
